@@ -1,6 +1,8 @@
 import React, { useMemo } from "react";
 import WeatherCard from "../components/WeatherCard";
 
+const API_KEY = 'ea15abcc9ff9d4e66d45bc7792b58a60';
+
 function Home() {
     const { 
         cloudiness, 
@@ -25,7 +27,7 @@ function Home() {
 
     return (
         <main className="App">
-            <header>Weather App</header>
+            <header className="weatherAppHeader">Weather App</header>
             <WeatherCard 
                 cloudiness={cloudiness}
                 currentTemp={currentTemp}
