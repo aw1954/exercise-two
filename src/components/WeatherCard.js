@@ -1,4 +1,5 @@
 import React from "react";
+import WeatherImage from "./WeatherImage";
 
 function WeatherCard({
     cloudiness,
@@ -11,10 +12,13 @@ function WeatherCard({
 }) {
     return (
         <section className="WeatherCard">
+            <div className="WeatherImageWrapper">
+                <WeatherImage weatherType={weatherType} />
+            </div>
+
             <p>
                 Cloudiness: <strong>{cloudiness}</strong>
             </p>
-
             <p>
                 CurrentTemp: <strong>{currentTemp}</strong>
             </p>

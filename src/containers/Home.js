@@ -56,10 +56,10 @@ function Home() {
         if (!weatherData) return {};
         return {
             cloudiness: weatherData.clouds.all,
-            currentTemp: weatherData.main.temp,
-            highTemp: weatherData.main.temp_max,
+            currentTemp: Math.round(weatherData.main.temp),
+            highTemp: Math.round(weatherData.main.temp_max),
             humidity: weatherData.main.humidity,
-            lowTemp: weatherData.main.temp_min,
+            lowTemp: Math.round(weatherData.main.temp_min),
             weatherType: weatherData.weather[0].main,
             windSpeed: weatherData.wind.speed,
         };
